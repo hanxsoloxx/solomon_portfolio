@@ -26,7 +26,8 @@ const cardData = [
     color: '#120F17',
     title: 'Midland Marketplace',
     description: 'Modern e-commerce platform (client project)',
-    label: 'E-commerce Platform',
+    label: 'Coming soon',
+    upcoming: true,
     link: null
   },
 
