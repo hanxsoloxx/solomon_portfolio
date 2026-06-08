@@ -27,7 +27,9 @@ export default function Hero({ splashRef }) {
                 >Solomon <span className='hero-lastname'>Chibuike</span></motion.h1>
                 <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }} className="hero-role">Web Developer & AI Engineer in the making</motion.p>
                 <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }} className="hero-tagline">I craft modern, intelligent, and user-focused web experiences that solve real problems</motion.p>
-                <motion.button initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }} className="hero-btn">View my work</motion.button>
+                <motion.a href="#projects" className="hero-btn" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }} >
+  View my work
+</motion.a>
                             
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: "easeOut", delay: 1 }} className="hero-socials">
                 <a href="https://github.com/hanxsoloxx"><FaGithub /></a>
