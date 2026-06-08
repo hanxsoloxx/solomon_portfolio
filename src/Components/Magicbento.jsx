@@ -12,19 +12,22 @@ const cardData = [
     color: '#120F17',
     title: 'Chef Hestia',
     description: 'AI recipe generator powered by Groq API',
-    label: 'AI Recipe App'
+    label: 'AI Recipe App',
+    link: 'https://chef-hestia.netlify.app'
   },
   {
     color: '#120F17',
     title: 'MuseTV',
-    description: 'Movie discovery App built with React & TMBD API',
-    label: 'Movie Discovery App'
+    description: 'Movie discovery App built with React & TMDB API',
+    label: 'Movie Discovery App',
+    link: 'https://musetv.netlify.app'
   },
   {
     color: '#120F17',
     title: 'Midland Marketplace',
-    description: 'Modern e-commerce platform (client project) ',
-    label: 'E-commerce Platform'
+    description: 'Modern e-commerce platform (client project)',
+    label: 'E-commerce Platform',
+    link: null
   },
 
   {
@@ -32,14 +35,16 @@ const cardData = [
     title: 'Hermes',
     description: 'A dark luxury shopping experience built with Context API and Tailwind.',
     label: 'Coming soon',
-    upcoming:true
+    upcoming: true,
+    link: null
   },
   {
     color: '#120F17',
     title: 'Kept',
     description: 'A private photo diary for moments you choose not to share with the world.',
     label: 'Coming Soon',
-    upcoming:true
+    upcoming: true,
+    link: null
   }
 ];
 
@@ -86,7 +91,8 @@ const ParticleCard = ({
   glowColor = DEFAULT_GLOW_COLOR,
   enableTilt = true,
   clickEffect = false,
-  enableMagnetism = false
+  enableMagnetism = false,
+  onClick  // 👈 add this
 }) => {
   const cardRef = useRef(null);
   const particlesRef = useRef([]);
@@ -304,11 +310,12 @@ const ParticleCard = ({
   }, [animateParticles, clearAllParticles, disableAnimations, enableTilt, enableMagnetism, clickEffect, glowColor]);
 
   return (
-    <div
-      ref={cardRef}
-      className={`${className} particle-container`}
-      style={{ ...style, position: 'relative', overflow: 'hidden' }}
-    >
+<div
+  ref={cardRef}
+  className={`${className} particle-container`}
+  style={{ ...style, position: 'relative', overflow: 'hidden' }}
+  onClick={onClick}
+>
       {children}
     </div>
   );
@@ -499,14 +506,16 @@ const MagicBento = ({
       <BentoCardGrid gridRef={gridRef}>
         {cardData.map((card, index) => {
           const baseClassName = `magic-bento-card ${textAutoHide ? 'magic-bento-card--text-autohide' : ''} ${enableBorderGlow ? 'magic-bento-card--border-glow' : ''}`;
-          const cardProps = {
-            className: baseClassName,
-            style: {
-              backgroundColor: card.color,
-              '--glow-color': glowColor,
-              opacity: card.upcoming ? 0.5 : 1
-            }
-          };
+const cardProps = {
+  className: baseClassName,
+  style: {
+    backgroundColor: card.color,
+    '--glow-color': glowColor,
+    opacity: card.upcoming ? 0.5 : 1,
+    cursor: card.link ? 'pointer' : 'default'
+  },
+  onClick: () => card.link && window.open(card.link, '_blank')
+}
 
           if (enableStars) {
             return (
