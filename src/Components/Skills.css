@@ -1,0 +1,61 @@
+:root{
+--night: #0e0a08;
+--dusk-warm: #180e08;
+--distance: #2a1e16;
+--longing: #4a3a30;
+--warmth: #7a5a42;
+--candlelight: #c89060;
+--far-light: #e8c8a0;
+--skin: #ede0d4;
+--font-display: 'Cormorant Garamond', serif;
+--font-body: 'DM Sans', sans-serif;
+}
+
+.grid-section {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6vw;
+    background-color: var(--night);
+}
+
+.skills-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: var(--warmth);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.grid-item {
+    border: 1px solid var(--distance);
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--warmth);
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+.grid-item:hover {
+    border-color: var(--candlelight);
+    color: var(--candlelight);
+    box-shadow: 0 0 20px rgba(200, 144, 96, 0.1)
+}

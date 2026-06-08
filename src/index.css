@@ -1,0 +1,35 @@
+
+:root{
+--night: #0e0a08;
+--dusk-warm: #180e08;
+--distance: #2a1e16;
+--longing: #4a3a30;
+--warmth: #7a5a42;
+--candlelight: #c89060;
+--far-light: #e8c8a0;
+--skin: #ede0d4;
+--font-display: 'Cormorant Garamond', serif;
+--font-body: 'DM Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+body {
+  background-color: var(--night);
+}
+
+html, body {
+  overflow-x: hidden;
+}

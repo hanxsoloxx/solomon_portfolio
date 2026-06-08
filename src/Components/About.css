@@ -1,0 +1,58 @@
+:root{
+--night: #0e0a08;
+--dusk-warm: #180e08;
+--distance: #2a1e16;
+--longing: #4a3a30;
+--warmth: #7a5a42;
+--candlelight: #c89060;
+--far-light: #e8c8a0;
+--skin: #ede0d4;
+--font-display: 'Cormorant Garamond', serif;
+--font-body: 'DM Sans', sans-serif;
+}
+
+.about-wrapper {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6vw;
+    background-color: var(--night);
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.amber-line {
+    width: 2px;
+    height: 100%;
+    min-height: 120px;
+    background-color: var(--candlelight);
+    flex-shrink: 0;
+}
+
+.about-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--warmth);
+    margin-bottom: 1.5rem;
+}
+
+.about-text {
+    font-family: var(--font-body);  
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--longing);
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+}

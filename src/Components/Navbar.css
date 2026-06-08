@@ -1,0 +1,65 @@
+:root{
+--night: #0e0a08;
+--dusk-warm: #180e08;
+--distance: #2a1e16;
+--longing: #4a3a30;
+--warmth: #7a5a42;
+--candlelight: #c89060;
+--far-light: #e8c8a0;
+--skin: #ede0d4;
+--font-display: 'Cormorant Garamond', serif;
+--font-body: 'DM Sans', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 4rem;
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--skin);
+  font-style: italic;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--warmth);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color 0.4s ease;
+}
+
+a:hover {
+  color: var(--candlelight);
+}
+
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+    header {
+    padding: 1.5rem 6vw;
+  }
+}
